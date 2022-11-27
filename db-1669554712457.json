@@ -2,7 +2,7 @@
   "recipes": [
     {
       "id": "1",
-      "title": "Veggie Stew",
+      "title": "Veggie Soup",
       "ingredients": [
         "1 Carrot",
         "1 Leek",
@@ -17,8 +17,8 @@
       "title": "Veggie Pizza",
       "ingredients": [
         "1 Base",
-        "Tomata pasata",
-        "1 Green pepper",
+        "Tomata passata",
+        "1 Green Pepper",
         "100g Mushrooms"
       ],
       "method": "1. Pre-heat the oven to 200C/3C/gas 5. Add the pasata, green pepper and mushrooms to the base. Place the lid on the oven and cook for 30 minutes. 5. Serve with a slaw of your choice",
@@ -26,30 +26,16 @@
     },
     {
       "id": "3",
-      "title": "Greek Salad",
+      "title": "Greek salad",
       "ingredients": [
         "1 Onion",
-        "1 Block of Feta",
+        "1 Block of feta",
         "Olives",
         "Tomatoes",
         "Olive Oil"
       ],
       "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
       "cookingTime": "35 minutes"
-    },
-    {
-      "title": "salată de ton cu porumb și ceapă",
-      "ingredients": [
-        "1 conserva de ton",
-        "1 ceapa mica",
-        "1 conserva de boabe de porumb",
-        "zeama de lamaie",
-        "sare si piper",
-        "1 lingura de maioneza"
-      ],
-      "method": "Într-un castron adăugăm tonul, ceapa, porumbul, un praf de sare și unul de piper, dar și câteva lingurițe de zeamă de lămâie, totul după gust. Amestecăn bine de tot, apoi gustăm. Pentru un plus de savoare vă recomandăm să adăugați în amestec și o lingură de maioneză, pentru ca salata de ton cu porumb și ceapă să nu fie atât de uscată.",
-      "cookingTime": "15 minutes",
-      "id": "K9aeSqm"
     }
   ]
 }
