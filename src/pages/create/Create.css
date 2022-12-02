@@ -27,3 +27,33 @@
     height: 80px;
 }
 
+.ingredients {
+    display: flex;
+    align-items: center;
+}
+.ingredients input {
+    height: 50px;
+}
+
+.ingredients-list span::after {
+    content: ', ';
+}
+
+.ingredients-list span:last-child::after {
+    content: '.';
+}
+
+.ingredients .add-ingredient-btn {
+    display: block;
+    height: 50px;
+    width: 150px;
+    margin: 0 0 0 10px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #58249c;
+    font-size: 1em;
+    color: #fff;
+    padding: 0;
+    cursor: pointer;
+}
+

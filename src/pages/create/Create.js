@@ -1,18 +1,29 @@
 import "./Create.css"
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 function Create(props) {
     const [title, setTitle] = useState("")
     const [method, setMethod] = useState("")
     const [time, setTime] = useState("")
+    const [newIngredient, setNewIngredient] = useState("")
+    const [ingredients, setIngredients] = useState([])
+    const ingredientInput = useRef(null)
     
 
     const addRecipe = (e) => {
         e.preventDefault()
-        console.log(time,method,title)
-
+        console.log(time,method,title, ingredients)
     }
 
+    const handleClick = (e) => {
+        
+        const ingredient = newIngredient.trim()
+        if (ingredient && !ingredients.includes(ingredient)){
+            setIngredients((prevState) => [...prevState, ingredient])
+        }
+        setNewIngredient('')
+        ingredientInput.current.focus()
+    } 
    
 
     return (
@@ -29,7 +40,19 @@ function Create(props) {
                 >
                 </input>
 
-                {/* // ingredients here */}
+                <label htmlFor='ingredients'>Add Recipe Ingredient</label>
+                <div className="ingredients">
+                    <input 
+                        type='text' 
+                        onChange={(e) => setNewIngredient(e.target.value)} 
+                        value={newIngredient} 
+                        ref= {ingredientInput} 
+                    >
+                    </input>
+                    <button type='button'className="add-ingredient-btn" onClick={handleClick}>Add</button>
+                </div>
+                {ingredients && <p className="ingredients-list" >Current ingredients:  
+                {ingredients.map(item => <span key={item}> {item}</span>)}</p>}
 
                 <label htmlFor="method">Cooking Method:</label>
                 <textarea  

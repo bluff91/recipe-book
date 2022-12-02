@@ -17,6 +17,10 @@
     text-decoration: none;
 }
 
+.navbar a {
+    text-decoration: none;
+}
+
 .navbar a:last-child {
     color: #fff;
     text-decoration: none;
@@ -24,6 +28,8 @@
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #fff;
+    font-weight: 450;
+    
 }
 
 .navbar a:last-child:hover {
