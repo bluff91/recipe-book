@@ -21,8 +21,7 @@ function Recipe(props) {
                     </ul>
                     <p className="method">{data.method}</p>
                 </>
-            )
-                
+            )    
             }
         </div>
     );

@@ -1,5 +1,7 @@
 import "./Create.css"
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useFetch } from "../../hooks/useFetch";
+import { useHistory } from "react-router-dom";
 
 function Create(props) {
     const [title, setTitle] = useState("")
@@ -8,15 +10,23 @@ function Create(props) {
     const [newIngredient, setNewIngredient] = useState("")
     const [ingredients, setIngredients] = useState([])
     const ingredientInput = useRef(null)
+    const history = useHistory()
+
+    const { postData, data } = useFetch('http://localhost:3000/recipes', 'POST')
+
+    useEffect(() => {
+        if (data) {
+            history.push('/')
+        }
+    }, [data, history])
     
 
     const addRecipe = (e) => {
         e.preventDefault()
-        console.log(time,method,title, ingredients)
+        postData({title, ingredients, method, cookingTime: time+' minutes'})  
     }
 
-    const handleClick = (e) => {
-        
+    const handleClick = (e) => { 
         const ingredient = newIngredient.trim()
         if (ingredient && !ingredients.includes(ingredient)){
             setIngredients((prevState) => [...prevState, ingredient])

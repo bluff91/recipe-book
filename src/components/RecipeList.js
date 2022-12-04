@@ -3,6 +3,9 @@ import './RecipeList.css'
 import { Link } from 'react-router-dom'
 
 function RecipeList(props) {
+    if (props.recipes.length ===0) {
+        return <div className='error'>No recipes to load...</div>
+    }
     return (
         <div className='recipe-list'>
             { props.recipes.map(item => (
