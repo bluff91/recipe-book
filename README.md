@@ -5,6 +5,6 @@
 - used react components
 - used react state, props and useEffect
 - used react router (BrowserRouter, Route, Switch)
-- used "<Link />" and useHistory to redirect the user
+- used Link and useHistory to redirect the user
 - used useLocation, useParams and useRef
 - used a custom hook to both fetch data and post data
