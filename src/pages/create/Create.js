@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useFetch } from "../../hooks/useFetch";
 import { useHistory } from "react-router-dom";
 
-function Create(props) {
+function Create() {
     const [title, setTitle] = useState("")
     const [method, setMethod] = useState("")
     const [time, setTime] = useState("")
@@ -12,18 +12,18 @@ function Create(props) {
     const ingredientInput = useRef(null)
     const history = useHistory()
 
-    const { postData, data } = useFetch('http://localhost:3000/recipes', 'POST')
+    const { postData, data } = useFetch('https://rcpbook.onrender.com/recipes', 'POST')
 
     useEffect(() => {
         if (data) {
-            history.push('/')
+            history.push('/recipe-book')
         }
     }, [data, history])
     
 
     const addRecipe = (e) => {
         e.preventDefault()
-        postData({title, ingredients, method, cookingTime: time+' minutes'})  
+        postData({title, ingredients, method, cookingTime: time})  
     }
 
     const handleClick = (e) => { 

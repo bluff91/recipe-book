@@ -2,7 +2,7 @@ import "./Searchbar.css"
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 
-function Searchbar(props) {
+function Searchbar() {
     const [term, setTerm] = useState('')
     const history = useHistory()
 

@@ -3,8 +3,8 @@ import React from 'react';
 import { useFetch } from "../../hooks/useFetch";
 import RecipeList from "../../components/RecipeList";
 
-function Home(props) {
-    const {data, pending, error} = useFetch('http://localhost:3000/recipes')
+function Home() {
+    const {data, pending, error} = useFetch('https://rcpbook.onrender.com/recipes')
     return (
         <div className="home">
             {error && <p className="error">{error}</p>}

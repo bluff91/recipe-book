@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/recipe-book'>
             <Home />
           </Route>
           <Route path='/create'>
@@ -26,7 +26,7 @@ function App() {
           <Route path='/search'>
             <Search />
           </Route>
-          <Route path='/recipes/:id'>
+          <Route path='/recipes/:_id'>
             <Recipe />
           </Route>
         </Switch>
