@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 //pages components
 import Create from './pages/create/Create';
@@ -16,20 +16,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <Switch>
-          <Route exact path='/recipe-book'>
-            <Home />
-          </Route>
-          <Route path='/create'>
-            <Create />
-          </Route>
-          <Route path='/search'>
-            <Search />
-          </Route>
-          <Route path='/recipes/:_id'>
-            <Recipe />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path='/recipe-book' element={<Home />} />
+          <Route path='/create' element={<Create />} />
+          <Route path='/search' element={<Search />} />
+          <Route path='/recipes/:_id' element={<Recipe />} />
+        </Routes>
       </BrowserRouter>  
     </div>
   );

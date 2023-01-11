@@ -11,7 +11,7 @@ function RecipeList(props) {
             { props.recipes.map(item => (
                 <div className='card' key={item._id}>
                     <h3>{item.title}</h3>
-                    <p>{item.cookingTime} to make.</p>
+                    <p>{item.cookingTime} minutes to make.</p>
                     <div>{item.method.substring(0,100)}...</div>
                     <Link to={`/recipes/${item._id}`}>Cook this</Link>
                 </div>

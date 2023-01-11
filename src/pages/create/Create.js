@@ -1,7 +1,7 @@
 import "./Create.css"
 import React, { useEffect, useRef, useState } from 'react';
 import { useFetch } from "../../hooks/useFetch";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
     const [title, setTitle] = useState("")
@@ -10,15 +10,15 @@ function Create() {
     const [newIngredient, setNewIngredient] = useState("")
     const [ingredients, setIngredients] = useState([])
     const ingredientInput = useRef(null)
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const { postData, data } = useFetch('https://rcpbook.onrender.com/recipes', 'POST')
 
     useEffect(() => {
         if (data) {
-            history.push('/recipe-book')
+            navigate('/recipe-book')
         }
-    }, [data, history])
+    }, [data, navigate])
     
 
     const addRecipe = (e) => {
