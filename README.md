@@ -1,10 +1,10 @@
-- Recipe book project built with React and json server
+- Recipe book project built with React(FE) and NodeJS+Express(BE)
 
 
-- used json server to simulate fetching data from an API
+- used custom made NodeJS + Express server with MangoDB deployed on Render server to fetch & post data
 - used react components
 - used react state, props and useEffect
-- used react router (BrowserRouter, Route, Switch)
-- used Link and useHistory to redirect the user
+- used react router (BrowserRouter, Route, Navigate)
+- used Link to direct the user
 - used useLocation, useParams and useRef
 - used a custom hook to both fetch data and post data
